@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Load MathJax for math display -->
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+  <title></title>
+</head>
+<body>
+<div class="container">
+
+<h1>Front End Utilities &amp; Frameworks</h1>
+
+<h2>Topics</h2>
+
+<ul>
+<li>
+<p>Utilities</p><ul>
+<li>
+<p>Bourbon</p><ul>
+<li>
+<p>Base library</p>
+</li><li>
+<p>Neat</p>
+</li>
+</ul>
+</li><li>
+<p>Compass</p>
+</li><li>
+<p>Polyfills</p>
+</li>
+</ul>
+</li><li>
+<p>Front-end Frameworks</p><ul>
+<li>
+<p>Foundation</p>
+</li><li>
+<p>Bootstrap</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>Bourbon</h1>
+
+<h2>Base Library</h2>
+
+<p>Bourbon is a mixin and function library for Sass, containing a lot of useful helpers and vendor prefixes.</p>
+
+<pre><code>@import 'bourbon';
+</code></pre>
+
+<ul>
+<li>
+<p>No code is directly output</p>
+</li><li>
+<p>Adheres to best practices</p>
+</li><li>
+<p>Available as a Ruby gem or through Prepros</p>
+</li>
+</ul>
+
+<p>Learn more on the <a href="http://bourbon.io/">Bourbon website</a></p>
+
+<h2>Neat</h2>
+
+<p>Neat is a library for Bourbon for grid layouts. It depends on and nicely complements the base Bourbon library</p>
+
+<pre><code>@import 'neat';
+</code></pre>
+
+<ul>
+<li>
+<p>Only one rule added to your CSS</p>
+</li><li>
+<p>Uses best practices</p>
+</li><li>
+<p>Available as Ruby gem or through Prepros</p>
+</li>
+</ul>
+
+<p>Learn more on the <a href="http://neat.bourbon.io/">Neat Website</a></p>
+
+<h2>More Info</h2>
+
+<p><em>Supports IE9+</em></p>
+
+<p>Thoughtbot—developers of Bourbon and Neat—also developed <a href="http://bitters.bourbon.io/">Bitters</a>, a baseline style scaffold.</p>
+
+<ul>
+<li>
+<p>Meant to hack on</p>
+</li><li>
+<p>Minimal</p>
+</li>
+</ul>
+
+<p>Component recipes can be found on the <a href="http://refills.bourbon.io/">Refills website</a></p>
+
+<h1>Compass</h1>
+
+<h2>Compass</h2>
+
+<blockquote>
+<p>Compass is an open-source CSS Authoring Framework</p>
+</blockquote>
+
+<p>It’s huge. I don’t know how to use it yet, but you should know it exists. At its simplest, it’s merely a Sass compiler.</p>
+
+<h1>Polyfills</h1>
+
+<h2>What is a <em>polyfill</em>?</h2>
+
+<blockquote>
+<p>polyfill (n): a JavaScript shim that replicates the standard API for older browsers</p>
+</blockquote>
+
+<p>Common polyfills:</p>
+
+<ul>
+<li>
+<p>HTML5shiv</p>
+</li><li>
+<p>Respond.js</p>
+</li><li>
+<p>Background-size polyfill</p>
+</li>
+</ul>
+
+<h2>Modernizr</h2>
+
+<blockquote>
+<p>Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser</p>
+</blockquote>
+
+<p>It adds classes to the <code>&lt;html&gt;</code> tag and exposes a JavaScript object (<code>Modernizr</code>) about the features available in the browser.</p>
+
+<p>Like browser sniffing, but easier to use.</p>
+
+<h2>HTML5shiv</h2>
+
+<p>Adds support in older IE (&lt;9) for new HTML5 elements, which it does not natively recognize, along with some basic styles for those elements.</p>
+
+<p>Included in Modernizr or get it from a CDN, Google Code, Github, Bower, or one of 500 other places.</p>
+
+<p>Usage: Include it in the <code>&lt;head&gt;</code> and be happy</p>
+
+<h2>Respond.js</h2>
+
+<p>Media query polyfill for old IE by Scott Jehl</p>
+
+<blockquote>
+<p>A fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)</p>
+</blockquote>
+
+<p>Get it from a CDN, Bower, Github or one of many other places.</p>
+
+<p>Usage, include it in the <code>&lt;head&gt;</code> after all the stylesheets and be happy</p>
+
+<h2>Background-size Polyfill</h2>
+
+<p>This is an IE behavior script for the <code>background-size: cover|contain;</code> CSS rules in IE8 by Louis Remi.</p>
+
+<p>Usage:</p>
+
+<pre><code>.selector { 
+    background-size: cover;
+    /* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+    -ms-behavior: url(/backgroundsize.min.htc);
+}
+</code></pre>
+
+<p>Get it from Bower or Github.</p>
+
+<h1>Front-End Frameworks</h1>
+
+<h2>What is a front-end framework</h2>
+
+<blockquote>
+<p>In the world of web design, to give a more straightforward definition, a framework is defined as a package made up of a structure of files and folders of standardized code (HTML, CSS, JS documents etc.) which can be used to support the development of websites, as a basis to start building a site.</p>
+</blockquote>
+
+<p>TLDR: It's a baseline of presentational styles and components for building a website or web application</p>
+
+<h2>What does it include?</h2>
+
+<ul>
+<li>
+<p>Grid system</p>
+</li><li>
+<p>Base styles</p><ul>
+<li>
+<p>Typography &amp; Lists</p>
+</li><li>
+<p>Form styles</p>
+</li><li>
+<p>Buttons</p>
+</li>
+</ul>
+</li><li>
+<p>Components</p><ul>
+<li>
+<p>Navigation</p>
+</li><li>
+<p>Alerts</p>
+</li><li>
+<p>Icons</p>
+</li>
+</ul>
+</li><li>
+<p>Javascript</p>
+</li>
+</ul>
+
+<h1>Foundation</h1>
+
+<h2>About Foundation</h2>
+
+<blockquote>
+<p>The most advanced responsive front-end framework in the world</p>
+</blockquote>
+
+<ul>
+<li>
+<p>Developed by Zurb</p>
+</li><li>
+<p>Current version (Foundation 5) supports IE 9+</p>
+</li><li>
+<p>Built in Sass</p>
+</li><li>
+<p>IE 8 support in Foundation 3.2</p>
+</li><li>
+<p>Customizable with variables</p>
+</li>
+</ul>
+
+<p>View the <a href="http://foundation.zurb.com/index.html">Foundation website</a> for more information</p>
+
+<h1>Bootstrap</h1>
+
+<h2>About Bootstrap</h2>
+
+<blockquote>
+<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+</blockquote>
+
+<ul>
+<li>
+<p>Developed by Twitter</p>
+</li><li>
+<p>Extremely popular</p>
+</li><li>
+<p>Current version supports IE 8+ (requires <strong>Respond.js</strong> and <strong>HTML5shiv</strong>)</p>
+</li><li>
+<p>IE 7 support in Bootstrap 2.x</p>
+</li><li>
+<p>Built in LESS, also available in Sass</p>
+</li><li>
+<p>Lots of resources available</p>
+</li><li>
+<p>Customizable with variables</p>
+</li>
+</ul>
+
+<p>View the <a href="http://getbootstrap.com/">Bootstrap website</a> for more information</p>
+
+<h1>Practice Exercises</h1>
+
+<h2>Bourbon</h2>
+
+<ol>
+<li>
+<p>In your website Sass file from last week, import Bourbon and Neat.</p>
+</li><li>
+<p>Use Neat to add basic grid stylings to your HTML page. Make it pretty.</p>
+</li><li>
+<p>Look through the Bourbon and Neat docs, and use a few mixins or variables to enhance your site.</p>
+</li>
+</ol>
+
+<h2>Bootstrap</h2>
+
+<ol>
+<li>
+<p>Make a new git repository for your Bootstrap site. Commit as needed</p>
+</li><li>
+<p>Download and add Bootstrap (the Sass version)</p>
+</li><li>
+<p>Configure Prepros not to directly compile the Bootstrap files</p>
+</li><li>
+<p>Import Bootstrap into your own Sass style files</p>
+</li><li>
+<p>Build a page with a navbar with dropdowns, jumbotron, and styled form</p>
+</li><li>
+<p>Add some icons from the glyphicons font. You may need to configure the variable <code>$icon-font-path</code> for this to work correctly</p>
+</li><li>
+<p>Add your own <code>_variables.scss</code> file and use it to customize the appearance of Bootstrap's styles and components</p>
+</li><li>
+<p>Make your own button variant and panel variant and add them to your page</p>
+</li>
+</ol>
+
+<h2>Foundation</h2>
+
+<ol>
+<li>
+<p>Make a new repository for your Foundation site. Commit as needed</p>
+</li><li>
+<p>Download and add Bootstrap</p>
+</li><li>
+<p>Configure Prepros not to directly compile Foundation</p>
+</li><li>
+<p>Import Foundation into your own Sass style files</p>
+</li><li>
+<p>Build a page with an off-canvas menu, responsive images, and other goodies</p>
+</li><li>
+<p>Use a variables file to override and play with the Foundation settings</p>
+</li><li>
+<p>Use some Foundation mixins to style things prettier</p>
+</li>
+</ol>
+
+
+</div>
+</body>
+</html>
