@@ -1,0 +1,245 @@
+Front End Utilities & Frameworks
+================================
+
+Topics
+------
+
+-   Utilities
+
+    -   Bourbon
+
+        -   Base library
+
+        -   Neat
+
+    -   Compass
+
+    -   Polyfills
+
+-   Front-end Frameworks
+
+    -   Foundation
+
+    -   Bootstrap
+
+Bourbon
+=======
+
+Base Library
+------------
+
+Bourbon is a mixin and function library for Sass, containing a lot of useful
+helpers and vendor prefixes.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@import 'bourbon';
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-   No code is directly output
+
+-   Adheres to best practices
+
+-   Available as a Ruby gem or through Prepros
+
+Learn more on the [Bourbon website][1]
+
+[1]: <http://bourbon.io/>
+
+Neat
+----
+
+Neat is a library for Bourbon for grid layouts. It depends on and nicely
+complements the base Bourbon library
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+@import 'neat';
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-   Only one rule added to your CSS
+
+-   Uses best practices
+
+-   Available as Ruby gem or through Prepros
+
+Learn more on the [Neat Website][2]
+
+[2]: <http://neat.bourbon.io/>
+
+More Info
+---------
+
+*Supports IE9+*
+
+Thoughtbot—developers of Bourbon and Neat—also developed [Bitters][3], a
+baseline style scaffold.
+
+[3]: <http://bitters.bourbon.io/>
+
+-   Meant to hack on
+
+-   Minimal
+
+Component recipes can be found on the [Refills website][4]
+
+[4]: <http://refills.bourbon.io/>
+
+Compass
+=======
+
+Compass
+-------
+
+>   Compass is an open-source CSS Authoring Framework
+
+It’s huge. I don’t know how to use it yet, but you should know it exists. At its
+simplest, it’s merely a Sass compiler.
+
+Polyfills
+=========
+
+What is a *polyfill*?
+---------------------
+
+>   polyfill (n): a JavaScript shim that replicates the standard API for older
+>   browsers
+
+Common polyfills:
+
+-   HTML5shiv
+
+-   Respond.js
+
+-   Background-size polyfill
+
+Modernizr
+---------
+
+>   Modernizr is a JavaScript library that detects HTML5 and CSS3 features in
+>   the user’s browser
+
+It adds classes to the `<html>` tag and exposes a JavaScript object
+(`Modernizr`) about the features available in the browser.
+
+Like browser sniffing, but easier to use.
+
+HTML5shiv
+---------
+
+Adds support in older IE (\<9) for new HTML5 elements, which it does not
+natively recognize, along with some basic styles for those elements.
+
+Included in Modernizr or get it from a CDN, Google Code, Github, Bower, or one
+of 500 other places.
+
+Usage: Include it in the `<head>` and be happy
+
+Respond.js
+----------
+
+Media query polyfill for old IE by Scott Jehl
+
+>   A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE
+>   6-8, and more)
+
+Get it from a CDN, Bower, Github or one of many other places.
+
+Usage, include it in the `<head>` after all the stylesheets and be happy
+
+Background-size Polyfill
+------------------------
+
+This is an IE behavior script for the `background-size: cover|contain;` CSS
+rules in IE8 by Louis Remi.
+
+Usage:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.selector { 
+    background-size: cover;
+    /* The url is relative to the document, not to the css file! */
+    /* Prefer absolute urls to avoid confusion. */
+    -ms-behavior: url(/backgroundsize.min.htc);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Get it from Bower or Github.
+
+Front-End Frameworks
+====================
+
+What is a front-end framework
+-----------------------------
+
+>   In the world of web design, to give a more straightforward definition, a
+>   framework is defined as a package made up of a structure of files and
+>   folders of standardized code (HTML, CSS, JS documents etc.) which can be
+>   used to support the development of websites, as a basis to start building a
+>   site.
+
+TLDR: It's a baseline of presentational styles and components for building a
+website or web application
+
+What does it include?
+---------------------
+
+-   Grid system
+
+-   Base styles
+
+    -   Typography & Lists
+
+    -   Form styles
+
+    -   Buttons
+
+-   Components
+
+    -   Navigation
+
+    -   Alerts
+
+    -   Icons
+
+-   Javascript
+
+Foundation
+==========
+
+About Foundation
+----------------
+
+>   The most advanced responsive front-end framework in the world
+
+-   Developed by Zurb
+
+-   Current version (Foundation 5) supports IE 9+
+
+-   Built in Sass
+
+-   IE 8 support in Foundation 3.2
+
+View the [Foundation website][5] for more information
+
+[5]: <http://foundation.zurb.com/index.html>
+
+Bootstrap
+=========
+
+>   Bootstrap is the most popular HTML, CSS, and JS framework for developing
+>   responsive, mobile first projects on the web.
+
+-   Developed by Twitter
+
+-   Extremely popular
+
+-   Current version supports IE 8+ (requires **Respond.js** and **HTML5shiv**)
+
+-   IE 7 support in Bootstrap 2.x
+
+-   Built in LESS, also available in Sass
+
+-   Lots of resources available
+
+View the [Bootstrap website][6] for more information
+
+[6]: <http://getbootstrap.com/>
