@@ -62,7 +62,7 @@ Bootstrap
 
 <section><section class="slide"><div><h1>Bourbon</h1></div></section>
 
-<section class="slide"><div><h2>Base Library</h2><p>Bourbon is a mixin and function library for Sass, containing a lot of useful helpers and vendor prefixes.</p><pre><code>@import 'bourbon';
+<section class="slide"><div><h2>Base Library</h2><p>Bourbon is a mixin and function library for Sass, containing a lot of useful helpers and vendor prefixes.</p><pre><code class="hljs">@import 'bourbon';
 </code></pre><ul>
 <li>
 No code is directly output
@@ -73,7 +73,7 @@ Available as a Ruby gem or through Prepros
 </li>
 </ul>Learn more on the <a href="http://bourbon.io/">Bourbon website</a></div></section>
 
-<section class="slide"><div><h2>Neat</h2><p>Neat is a library for Bourbon for grid layouts. It depends on and nicely complements the base Bourbon library</p><pre><code>@import 'neat';
+<section class="slide"><div><h2>Neat</h2><p>Neat is a library for Bourbon for grid layouts. It depends on and nicely complements the base Bourbon library</p><pre><code class="hljs">@import 'neat';
 </code></pre><ul>
 <li>
 Only one rule added to your CSS
@@ -122,7 +122,7 @@ Background-size polyfill
 <p>A fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)</p>
 </blockquote><p>Get it from a CDN, Bower, Github or one of many other places.</p><p>Usage, include it in the <code>&lt;head&gt;</code> after all the stylesheets and be happy</p></div></section>
 
-<section class="slide"><div><h2>Background-size Polyfill</h2><p>This is an IE behavior script for the <code>background-size: cover|contain;</code> CSS rules in IE8 by Louis Remi.</p><p>Usage:</p><pre><code>.selector { 
+<section class="slide"><div><h2>Background-size Polyfill</h2><p>This is an IE behavior script for the <code>background-size: cover|contain;</code> CSS rules in IE8 by Louis Remi.</p><p>Usage:</p><pre><code class="hljs">.selector { 
     background-size: cover;
     /* The url is relative to the document, not to the css file! */
     /* Prefer absolute urls to avoid confusion. */
@@ -282,7 +282,7 @@ Use some Foundation mixins to style things prettier
             { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
             { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); } },
+            { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
             { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
             { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
